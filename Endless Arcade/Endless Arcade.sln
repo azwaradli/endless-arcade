@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{AD1E76D5-39D3-89A6-8BE7-02919B0C6ED0}") = "Endless Arcade", "Assembly-CSharp.csproj", "{9DB11025-646F-56A1-52CC-575BAD2D724C}"
+EndProject
+Project("{AD1E76D5-39D3-89A6-8BE7-02919B0C6ED0}") = "Endless Arcade", "Assembly-CSharp-Editor.csproj", "{0DA94328-BE18-E744-9EB6-BFC2D773C3C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DB11025-646F-56A1-52CC-575BAD2D724C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DB11025-646F-56A1-52CC-575BAD2D724C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DB11025-646F-56A1-52CC-575BAD2D724C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DB11025-646F-56A1-52CC-575BAD2D724C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA94328-BE18-E744-9EB6-BFC2D773C3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA94328-BE18-E744-9EB6-BFC2D773C3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA94328-BE18-E744-9EB6-BFC2D773C3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA94328-BE18-E744-9EB6-BFC2D773C3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
