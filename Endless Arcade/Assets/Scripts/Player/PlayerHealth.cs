@@ -68,6 +68,8 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
 
+		HighScoreManager.checkHighScore ();
+
         playerShooting.DisableEffects ();
 
         anim.SetTrigger ("Die");
@@ -79,6 +81,15 @@ public class PlayerHealth : MonoBehaviour
         playerShooting.enabled = false;
     }
 
+	public void AddHealth(int amount){
+		currentHealth += amount;
+
+		if (currentHealth > startingHealth) {
+			currentHealth = startingHealth;
+		}
+
+		healthSlider.value = currentHealth;
+	}
 
     public void RestartLevel ()
     {

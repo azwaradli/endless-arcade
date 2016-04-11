@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour
 {
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
-
+    public float numberOfBullets = 200;
+	public float maxBullet = 200;
+	public Text text;
 
     float timer;
     Ray shootRay;
@@ -16,7 +19,6 @@ public class PlayerShooting : MonoBehaviour
     AudioSource gunAudio;
     Light gunLight;
     float effectsDisplayTime = 0.2f;
-
 
     void Awake ()
     {
@@ -34,13 +36,15 @@ public class PlayerShooting : MonoBehaviour
 
 		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
-            Shoot ();
+        	if(numberOfBullets > 0) Shoot ();
         }
 
         if(timer >= timeBetweenBullets * effectsDisplayTime)
         {
             DisableEffects ();
         }
+
+		text.text = "Ammo: " + numberOfBullets;
     }
 
 
@@ -53,6 +57,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot ()
     {
+    	numberOfBullets--;
+
         timer = 0f;
 
         gunAudio.Play ();
@@ -82,4 +88,15 @@ public class PlayerShooting : MonoBehaviour
             gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
         }
     }
+
+	public void AddBullet(){
+		if (numberOfBullets <= 60) {
+			numberOfBullets += 60;
+		} else {
+			numberOfBullets += 30;
+		}
+
+		if (numberOfBullets > maxBullet)
+			numberOfBullets = maxBullet;
+	}
 }
